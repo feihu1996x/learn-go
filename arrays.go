@@ -11,6 +11,7 @@ package main
 import "fmt"
 
 func printArray(arr [5]int){
+    // 函数接收一个长度为5的整型数组作为参数
     // Go语言中，
     // 数组是值类型，
     // 传参时会对数组进行一次深拷贝
@@ -29,6 +30,7 @@ func printArray2(arr *[5]int){
 
 func main(){
     // 声明一个长度为5的整型数组
+    // 其中每个元素的初始值均为0
     var arr1 [5]int
 
     // 定义一个长度为3的整型数组
