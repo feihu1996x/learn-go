@@ -73,4 +73,6 @@ func main(){
         fmt.Printf("(%d, %c)\n", i, ch)
     }
 
+    // 其他字符串操作参见"strings"标准库
+
 }

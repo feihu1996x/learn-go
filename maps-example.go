@@ -19,11 +19,11 @@ func lengthOfNonRepeatingSubStr(s string) int {
     无论如何，都要更新lastOccured[x]和maxLength
     */
 
-    lastOccured := make(map[byte]int)
+    lastOccured := make(map[rune]int)
     start := 0
     maxLength := 0
 
-    for i, ch := range []byte(s) {
+    for i, ch := range []rune(s) {
         if lastI, ok := lastOccured[ch]; ok && lastI >= start {
             start = lastI + 1
         }
