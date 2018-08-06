@@ -4,7 +4,7 @@
  * @author: feihu1996.cn
  * @date: 18-7-23
  * @version: 1.0
- */
+*/
 
  /*
      Go语言内建变量类型：
