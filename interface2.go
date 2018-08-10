@@ -62,7 +62,10 @@ func (q *queue2) pop()interface{} {
     head := (*q)[0]
     *q = (*q)[1:]
     return head
-    //return head.(int)  // 限定pop方法值返回head(interface{})时，取出其包含的int值，如果head不包含int值， 那么就会出现运行错误
+    // 限定pop方法值返回head(interface{})时，\
+    // 取出其包含的int值，如果head不包含int值， \
+    // 那么就会出现运行错误
+    //return head.(int)
 }
 
 func main() {
