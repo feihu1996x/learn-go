@@ -31,7 +31,8 @@ type stillRetriever struct {
 // 为stillRetriever结构体类型定义一个String方法
 // 它实现了Stringer接口
 func (r *stillRetriever) String() string{
-    return fmt.Sprintf("stillRetriever: {contents: %s}", r.contents)
+    return fmt.Sprintf("stillRetriever: {contents: %s}",
+        r.contents)
 }
 
 func printFile2(filename string) {
