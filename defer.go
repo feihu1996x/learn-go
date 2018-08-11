@@ -12,6 +12,7 @@ import (
     "fmt"
     "os"
     "bufio"
+    "errors"
 )
 
 // 定义一个名为intGen的函数类型
@@ -45,9 +46,33 @@ func tryDefer() {
 }
 
 func writeFile(filename string) {
-    file, err := os.Create(filename)
+    // file, err := os.Create(filename)
+    file, err := os.OpenFile(
+        filename, os.O_EXCL|os.O_CREATE, 0666)
     if err != nil {
+        // 异常处理
+
+        // panic(err)
+
+        // fmt.Println("file already exists.")
+
+        // fmt.Println("Error:", err.Error())
+
+        // fmt.Println("Error:", err)
+
+        //if pathError, ok := err.(*os.PathError); !ok {
+        //    panic(err)
+        //} else {
+        //    fmt.Println(pathError.Op,  // open
+        //        pathError.Path,  // abc.txt
+        //            pathError.Err)  // file exits
+        //}
+
+        // err只是一个普通的值，这个值也可以自定义
+        err := errors.New("something wrong")
         panic(err)
+
+        return
     }
 
     // 确保writeFile函数结束时关闭文件
